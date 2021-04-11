@@ -1,0 +1,21 @@
+sudo: false
+language: python
+python:
+  - 3.6
+branches:
+  only:
+    - master # build master branch only
+
+addons:
+  ssh_known_hosts: 
+  - 8.136.13.58
+
+env:
+ global:
+   - ALI_IP: 8.136.13.58
+
+script:
+  - ssh -i ${ali} root@${ALI_IP} "cd /opt/voidking/ && git pull"
+
+after_success:
+  - echo "success"
