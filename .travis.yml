@@ -18,4 +18,4 @@ script:
   - ssh -i ${ali} root@${ALI_IP} "cd /opt/voidking/ && git pull"
 
 after_success:
-  - echo "success"
+  - echo "deploy success"
