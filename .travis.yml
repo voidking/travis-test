@@ -4,7 +4,7 @@ python:
   - 3.6
 branches:
   only:
-    - master # build master branch only
+    - main # build main branch only
 
 addons:
   ssh_known_hosts: 
